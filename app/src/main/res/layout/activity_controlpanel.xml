@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#234865"
+    android:orientation="vertical"
+    tools:context=".Index.ControlPanel.Controller.ControlPanelActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_ControlPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_point_Multifunction_controlView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_white_point" />
+
+        <ImageView
+
+            android:id="@+id/iv_point_light_controlView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_point_Multifunction_controlView"
+            android:background="@drawable/oval_gray_point" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

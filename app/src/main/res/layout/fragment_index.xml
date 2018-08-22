@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".TestFragment">
+    tools:context=".TestFragment"
+    >
+
+
 
     <LinearLayout
         android:id="@+id/ll_index_title"

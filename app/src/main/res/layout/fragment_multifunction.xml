@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="92px"
+        android:layout_marginTop="72dp"
         android:text="计时"
         android:textColor="#A7A3B0"
         android:textSize="12sp"
@@ -54,7 +54,7 @@
         android:layout_marginTop="15dp"
         android:text="0:00"
         android:textColor="@color/white"
-        android:textSize="100sp"
+        android:textSize="85sp"
 
         />
     <!--2.22sp-->
@@ -73,13 +73,13 @@
             android:layout_marginTop="72dp"
             android:text="GPS"
             android:textColor="#A7A3B0"
-            android:textSize="16dp" />
+            android:textSize="12sp" />
 
         <ImageView
             android:id="@+id/iv_gps_signal"
-            android:layout_width="30dp"
+            android:layout_width="20dp"
             android:layout_height="24dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="65dp"
             android:layout_toRightOf="@+id/tv_gpsTitle" />
 
@@ -87,18 +87,18 @@
             android:id="@+id/tv_gpsinfo_feedback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="28px"
-            android:layout_marginTop="72px"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="72dp"
             android:layout_toRightOf="@+id/iv_gps_signal"
             android:text="信号强，地图定位准确"
             android:textColor="#A7A3B0"
-            android:textSize="16px" />
+            android:textSize="12sp" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="1dp"
 
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="81dp"
             android:layout_toRightOf="@+id/tv_gpsinfo_feedback"
             android:background="#A7A3B0"
@@ -106,11 +106,11 @@
             />
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="82dp"
-            android:layout_marginTop="55dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="62dp"
             android:src="@mipmap/system_icon_map"
 
             />
@@ -124,10 +124,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/rl_gpsLocationView"
         android:layout_marginLeft="85dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="35dp"
         android:text="步数"
         android:textColor="#A7A3B0"
-        android:textSize="22dp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/tv_Residual_electricityTitle"
@@ -136,20 +136,22 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/rl_gpsLocationView"
         android:layout_marginRight="65dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="35dp"
         android:text="剩余电量"
         android:textColor="#A7A3B0"
-        android:textSize="22dp" />
+        android:textSize="12dp" />
 
 
     <TextView
         android:id="@+id/tv_stepNum"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
+
 
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_step_title"
-        android:layout_marginLeft="90dp"
-        android:gravity="center_horizontal"
+        android:layout_marginLeft="6dp"
+        android:gravity="right"
+        android:singleLine="true"
         android:text="0"
         android:textColor="@color/white"
         android:textSize="36dp"
@@ -162,12 +164,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_step_title"
         android:layout_marginLeft="3dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="25dp"
         android:layout_toRightOf="@+id/tv_stepNum"
-        android:alpha="0.6"
+        android:alpha="0.4"
         android:text="步"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="12sp"
 
         />
 
@@ -176,12 +178,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tv_Residual_electricityTitle"
-        android:layout_marginRight="75dp"
-        android:layout_marginTop="20dp"
-        android:alpha="0.6"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="25dp"
+        android:alpha="0.4"
         android:text="%"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="12sp"
 
         />
 
@@ -191,8 +193,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tv_step_title"
-        android:layout_marginLeft="26px"
-        android:layout_marginRight="90px"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="60dp"
         android:layout_toRightOf="@+id/tv_stepNum"
         android:gravity="right"
         android:text="100"
@@ -200,13 +202,32 @@
         android:textSize="36sp" />
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/tv_stepNum"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="110dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/oval_action_point"
+        android:id="@+id/rl_actionTime"
         >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/triangle"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="开始"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:textSize="14sp"
+            />
+
 
 
 
