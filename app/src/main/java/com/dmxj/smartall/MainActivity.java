@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dmxj.smartall.Base.BaseActivity;
-import com.dmxj.smartall.Index.IndexFragment;
+import com.dmxj.smartall.Index.View.IndexFragment;
 import com.yatoooon.screenadaptation.ScreenAdapterTools;
 
 import java.util.ArrayList;
