@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/controller_menubg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/iv_back_controllerMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/system_icon_return_black"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_deviceLightView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+
+            android:layout_marginRight="30dp"
+            android:text="设备灯光控制 >"
+            android:textColor="#A7A3B0"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_jishiTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92px"
+        android:text="计时"
+        android:textColor="#A7A3B0"
+        android:textSize="12sp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tv_Chronograph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_jishiTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="0:00"
+        android:textColor="@color/white"
+        android:textSize="100sp"
+
+        />
+    <!--2.22sp-->
+
+    <RelativeLayout
+        android:id="@+id/rl_gpsLocationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Chronograph">
+
+        <TextView
+            android:id="@+id/tv_gpsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="72dp"
+            android:text="GPS"
+            android:textColor="#A7A3B0"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_gps_signal"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="65dp"
+            android:layout_toRightOf="@+id/tv_gpsTitle" />
+
+        <TextView
+            android:id="@+id/tv_gpsinfo_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28px"
+            android:layout_marginTop="72px"
+            android:layout_toRightOf="@+id/iv_gps_signal"
+            android:text="信号强，地图定位准确"
+            android:textColor="#A7A3B0"
+            android:textSize="16px" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="81dp"
+            android:layout_toRightOf="@+id/tv_gpsinfo_feedback"
+            android:background="#A7A3B0"
+
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="82dp"
+            android:layout_marginTop="55dp"
+            android:src="@mipmap/system_icon_map"
+
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_step_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_gpsLocationView"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="55dp"
+        android:text="步数"
+        android:textColor="#A7A3B0"
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/tv_Residual_electricityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rl_gpsLocationView"
+        android:layout_marginRight="65dp"
+        android:layout_marginTop="55dp"
+        android:text="剩余电量"
+        android:textColor="#A7A3B0"
+        android:textSize="22dp" />
+
+
+    <TextView
+        android:id="@+id/tv_stepNum"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_step_title"
+        android:layout_marginLeft="90dp"
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="36dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_stepCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_step_title"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="23dp"
+        android:layout_toRightOf="@+id/tv_stepNum"
+        android:alpha="0.6"
+        android:text="步"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_Residual_electricityTitle"
+        android:layout_marginRight="75dp"
+        android:layout_marginTop="20dp"
+        android:alpha="0.6"
+        android:text="%"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_Residual_electricityPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_step_title"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="90px"
+        android:layout_toRightOf="@+id/tv_stepNum"
+        android:gravity="right"
+        android:text="100"
+        android:textColor="@color/white"
+        android:textSize="36sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/oval_action_point"
+        >
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
