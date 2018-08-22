@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dmxj.smartall">
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--屏幕适配start-->
+        <!--使用方法：https://github.com/yatoooon/AndroidScreenAdaptation 简介如下：-->
+        <!--一：添加依赖初始化：-->
+        <!-- (1.)创建自己的application继承Application
+             (2.)在AndroidManifest.xml文件中声明使用你自己创建的application并且添加meta-data数据,例子上标明了这些数据的代表的意义-->
+        <!--二：开始使用-->
+        <!-- (1.)在Activity中,找到setcontentview(R.layout.xxxxxx)-->
+        <!-- (2.)在Fragment或recyclerview,listview或gridview,viewpager,自定义view等等等,只要能找到布局填充器-->
+        <!-- (3)找不到布局填充器的情况，现在打开你的布局文件,并且打开预览,点击预览上部的小手机图标选择和你设计图匹配的模拟器,然后就可以按照设计图测量并编写布局文件,
+                测量和编写的单位用px还是dp取决于你清单文件中的meta_data中unit填写的值,暂时只支持宽 高 padding layout_margin 字体大小
+                这几个属性(如果有minmaxWidthHeight这种属性值,适配时...loadView(...view,new CustomConversion()),如果有其他需要的属性值,
+                请自行继承IConversion和AbsLoadViewHelper编写),布局文件完成后,你看到的预览是什么样,各种真机运行出来就是什么样.-->
+
+        <!--设计图的宽,单位是像素,推荐用markman测量,量出来如果是750px那么请尽量去找ui设计师要一份android的设计图.-->
+        <meta-data
+            android:name="designwidth"
+            android:value="750" />
+
+        <!--//设计图对应的标准dpi,根据下面的那张图找到对应的dpi,比如1080就对应480dpi,如果拿到的是其他宽度的设计图,那么选择一个相近的dpi就好了-->
+        <meta-data
+            android:name="designdpi"
+            android:value="188" />
+
+        <!-- //全局字体的大小倍数,有时候老板会觉得你的所有的字小了或者大了,你总不能一个一个去改吧-->
+        <meta-data
+            android:name="fontsize"
+            android:value="1.0" />
+
+        <!--//你的布局里面用的是px这就写px,你的布局里面用的是dp这就写dp,要统一,不要一会儿px一会儿dp,字体也用px或者dp,不要用sp,微信qq用的肯定不是sp.-->
+        <meta-data
+            android:name="unit"
+            android:value="px" />
+        <!--屏幕适配end-->
+    </application>
+
+</manifest>

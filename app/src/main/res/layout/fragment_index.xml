@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TestFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_index_title"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#FFF"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_index_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24px"
+            android:layout_marginRight="24px"
+            android:src="@mipmap/icon_index_scan" />
+
+        <TextView
+            android:id="@+id/tv_index_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="#463D56"
+            android:textSize="34px"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_index_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24px"
+            android:layout_marginRight="24px"
+            android:src="@mipmap/icon_index_notice" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_index_background"
+            android:layout_width="match_parent"
+            android:layout_height="178px"
+            android:layout_margin="20px"
+            android:background="@drawable/shape_index_info_background" />
+
+        <com.dmxj.smartall.CustomView.ShapeImageView.ShapeImageView
+            android:id="@+id/siv_index_head"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_alignLeft="@+id/iv_index_background"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="44px"
+            android:src="@mipmap/ic_launcher_round"
+            app:siv_shape="circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/siv_index_head"
+            android:layout_alignTop="@+id/siv_index_head"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:layout_toRightOf="@+id/siv_index_head"
+            android:orientation="vertical"
+            android:paddingTop="5px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/siv_index_head"
+                android:text="用户isnnam34"
+                android:textColor="#FFf"
+                android:textSize="28px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:alpha="0.8"
+                android:text="拥有两个设备"
+                android:textColor="#FFFFFF"
+                android:textSize="24px" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="102px"
+            android:drawableTop="@mipmap/ic_qiandao"
+            android:text="已签到15天"
+            android:textColor="#fff"
+            android:textSize="24px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="278px"
+        android:background="#FFF"
+        android:paddingLeft="30px">
+
+        <TextView
+            android:id="@+id/tag_index_shebei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="14px"
+            android:text="设备"
+            android:textColor="#463D56"
+            android:textSize="30px" />
+
+        <LinearLayout
+            android:id="@+id/ll_index_xiezi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tag_index_shebei"
+            android:layout_marginLeft="22px"
+            android:layout_marginTop="35px"
+            android:drawableTop="@mipmap/ic_xiezi"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="未连接"
+            android:textSize="26px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_xiezi" />
+
+            <com.dmxj.smartall.CustomView.DrawableCenterTextView
+                android:id="@+id/tv_index_xiezi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8px"
+                android:drawableLeft="@drawable/ic_green_point"
+                android:drawablePadding="10px"
+                android:gravity="center"
+                android:text="已连接"
+                android:textSize="26px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ll_index_xiezi"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_huaban" />
+
+            <com.dmxj.smartall.CustomView.DrawableCenterTextView
+                android:id="@+id/tv_index_huaban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8px"
+                android:drawableLeft="@drawable/ic_green_point"
+                android:drawablePadding="10px"
+                android:gravity="center"
+                android:text="已连接"
+                android:textSize="26px" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="172px"
+            android:layout_height="108px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="22px"
+            android:background="@drawable/shape_index_info_background"
+            android:gravity="center"
+            android:text="控制面板"
+            android:textColor="#fff"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="20px"
+        android:background="#fff"
+        android:paddingBottom="20px">
+
+        <TextView
+            android:layout_marginBottom="14px"
+            android:layout_marginTop="14px"
+            android:layout_marginLeft="40px"
+            android:id="@+id/tag_index_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="里程数据（本周）"
+            android:textColor="#463D56"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_index_data_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="14px"
+            android:drawablePadding="10px"
+            android:drawableRight="@mipmap/icon_more"
+            android:text="更多"
+            android:textColor="#A7A3B0"
+            android:textSize="28px" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tag_index_distance"
+            android:layout_marginTop="10px"
+            android:layout_toLeftOf="@+id/tag_index_ri" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/chartView"
+            android:layout_marginLeft="40px"
+            android:background="#FFF"
+            android:text="km"
+            android:textColor="#A7A3B0"
+            android:textSize="28px" />
+
+        <TextView
+            android:layout_marginRight="20px"
+            android:id="@+id/tag_index_ri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/chartView"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="2px"
+            android:background="#FFF"
+            android:text="日"
+            android:textColor="#A7A3B0"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+</LinearLayout>
